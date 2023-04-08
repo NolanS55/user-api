@@ -50,7 +50,7 @@ app.post("/api/user/login", (req, res) => {
     userService.checkUser(req.body)
     .then((user) => {
         let payload = {
-            _id : jwt_payload._id,
+            _id : user._id,
             userName: user.userName
           };
           
